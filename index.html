@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dynamic Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Weather App</h1>
+
+  <form class="input-wrapper" id="weatherForm">
+    <svg class="globe-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="white" aria-label="Globe Icon" role="img" title="Get Current Location Weather">
+      <circle cx="32" cy="32" r="30" stroke="white" stroke-width="2" fill="none" />
+      <path d="M32 2a30 30 0 010 60M2 32a30 30 0 0160 0" stroke="white" stroke-width="1" />
+      <path d="M12 32h40M32 12v40" stroke="white" stroke-width="1" />
+    </svg>
+
+    <input type="text" id="cityInput" placeholder="Enter city name" aria-label="City Name" />
+    <button type="submit" id="getWeatherBtn">Get Weather</button>
+  </form>
+
+  <div class="weather-result" id="weatherResult" style="display:none;">
+    <h2 id="cityName"></h2>
+    <img id="weatherIcon" src="" alt="Weather Icon" />
+    <p id="weatherDescription"></p>
+    <p><strong>Temperature:</strong> <span id="temperature"></span> °C</p>
+    <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+    <p><strong>Wind Speed:</strong> <span id="windSpeed"></span> m/s</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
